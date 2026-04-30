@@ -220,19 +220,15 @@ flutter build apk --release
 | Permission response handling | ✅     | Handles denied, deniedForever, and granted states                                   |
 
 ---
-
 ## 👥 Group Members
 
-Ashenaf Feleke..................................................................0168/15
-Melkiyas Teshoma ...............................................................0719/15
-Andualem Argo...................................................................0149/15
-Natnael Abebaw….................................................................0840/15
-Sifan Geremu .................................................................. 0941/15
+| 👤 Name | 🆔 ID |
+|--------|------|
+| Ashenaf Feleke | 0168/15 |
+| Melkiyas Teshoma | 0719/15 |
+| Andualem Argo | 0149/15 |
+| Natnael Abebaw | 0840/15 |
+| Sifan Geremu | 0941/15 |
 
-> Fill in your names and IDs above before submission.
 
----
 
-## 📄 License
-
-This project was developed as a university course assignment.
