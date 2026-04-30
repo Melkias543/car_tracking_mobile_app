@@ -63,32 +63,55 @@ class _FavoritesScreenState extends State<FavoritesScreen> {
               separatorBuilder: (_, i) => const SizedBox(height: 10),
               itemBuilder: (context, i) {
                 final t = _favorites[i];
+                final statusColor = t.status.toLowerCase() == 'delayed'
+                    ? Colors.orange
+                    : t.status.toLowerCase() == 'cancelled'
+                        ? Colors.red
+                        : Colors.green;
+                final typeIcon = t.type.toLowerCase() == 'train'
+                    ? Icons.train
+                    : Icons.directions_bus;
                 return GestureDetector(
                   onTap: () => Navigator.push(
                     context,
                     MaterialPageRoute(builder: (_) => DetailScreen(transport: t)),
                   ).then((_) => _load()),
                   child: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
+                    padding: const EdgeInsets.all(16),
                     decoration: BoxDecoration(color: _primaryColor, borderRadius: BorderRadius.circular(12)),
                     child: Row(
                       children: [
-                        const Icon(Icons.star, color: _accentColor),
+                        Icon(typeIcon, color: _accentColor, size: 32),
                         const SizedBox(width: 16),
                         Expanded(
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text(t.name, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+                              Text(t.name, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16)),
+                              const SizedBox(height: 2),
                               Text('${t.origin} → ${t.destination}', style: const TextStyle(color: _greyText, fontSize: 13)),
+                              const SizedBox(height: 4),
+                              Container(
+                                padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                                decoration: BoxDecoration(
+                                  color: statusColor.withValues(alpha: 0.2),
+                                  borderRadius: BorderRadius.circular(8),
+                                ),
+                                child: Text(t.status, style: TextStyle(color: statusColor, fontSize: 12)),
+                              ),
                             ],
                           ),
                         ),
-                        Text(t.arrivalTime, style: const TextStyle(color: _greyText)),
-                        const SizedBox(width: 8),
-                        GestureDetector(
-                          onTap: () => _remove(t.id),
-                          child: const Icon(Icons.delete_outline, color: _greyText),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.end,
+                          children: [
+                            Text(t.arrivalTime, style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+                            const SizedBox(height: 8),
+                            GestureDetector(
+                              onTap: () => _remove(t.id),
+                              child: const Icon(Icons.delete_outline, color: _greyText),
+                            ),
+                          ],
                         ),
                       ],
                     ),

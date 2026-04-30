@@ -19,7 +19,7 @@ class _DetailScreenState extends State<DetailScreen> {
   final _service = TransportService();
   bool _isFav = false;
 
-  final List<String> _stops = ['Central Station', 'Park Ave', 'Market Square', 'University', 'Harbor', 'Stadium'];
+  List<String> get _stops => [widget.transport.origin, widget.transport.destination];
 
   @override
   void initState() {
