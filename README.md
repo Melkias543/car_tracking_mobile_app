@@ -178,7 +178,7 @@ Permissions declared in `AndroidManifest.xml`:
 
 ```bash
 # 1. Clone the repository
-git clone <your-repo-url>
+git clone https://github.com/Melkias543/car_tracking_mobile_app/
 cd car_tracking_app
 
 # 2. Install dependencies
