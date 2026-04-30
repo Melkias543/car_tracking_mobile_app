@@ -1,10 +1,10 @@
 # 🚌 TransitTrack — Public Transport Tracker
 
-A Flutter mobile application that provides real-time public transport tracking for Addis Ababa, Ethiopia. Users can view live bus and train arrivals, filter by status, save favorite routes, and see their current GPS location — all in a clean, dark-themed UI.
+A Flutter mobile application that provides real-time public transport tracking. Users can view live bus and train arrivals, filter by status, save favorite routes, and see their current GPS location — all in a clean, dark-themed UI.
 
 ---
 
-## 📱 Screenshots
+## 📱 Screen Experience
 
 > Run the app on a real Android device to see the full experience.
 
