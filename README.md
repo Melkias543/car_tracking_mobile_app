@@ -1,4 +1,4 @@
-# 🚌 TransitTrack — Public Transport Tracker
+# 🚌 TransitPortTrack — Public Transport Tracker
 
 A Flutter mobile application that provides real-time public transport tracking. Users can view live bus and train arrivals, filter by status, save favorite routes, and see their current GPS location — all in a clean, dark-themed UI.
 
