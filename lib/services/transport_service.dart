@@ -39,8 +39,8 @@ class TransportService {
 
   Future<void> removeFavorite(String id) async {
     final prefs = await SharedPreferences.getInstance();
-    final raw = prefs.getStringList(_favsKey) ?? []
-      ..removeWhere((s) => Transport.fromJsonString(s).id == id);
+    final raw = prefs.getStringList(_favsKey) ?? [];
+    raw.removeWhere((s) => Transport.fromJsonString(s).id == id);
     await prefs.setStringList(_favsKey, raw);
   }
 }

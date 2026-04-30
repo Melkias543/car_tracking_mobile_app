@@ -59,7 +59,7 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: _bgColor,
       appBar: AppBar(
         backgroundColor: _primaryColor,
-        title: const Text('TransitTrack',
+        title: const Text('TransitTracker',
             style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
         actions: [
           IconButton(
