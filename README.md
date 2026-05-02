@@ -3,7 +3,8 @@
 A Flutter mobile application that provides real-time public transport tracking. Users can view live bus and train arrivals, filter by status, save favorite routes, and see their current GPS location — all in a clean, dark-themed UI.
 
 ---
-
+## VIDEO lINK
+https://www.loom.com/share/0d11d091e24e4b33a70d1a04d922ab42
 ## 📱 Screen Experience
 
 > Run the app on a real Android device to see the full experience.
@@ -229,6 +230,7 @@ flutter build apk --release
 | Andualem Argo | 0149/15 |
 | Natnael Abebaw | 0840/15 |
 | Sifan Geremu | 0941/15 |
+
 
 
 
